@@ -124,7 +124,7 @@ This allows our application to connect to the database using the environment var
 Now, let's build and start our Docker containers:
 
 ```bash
-docker-compose up --build
+docker-compose up -d --build
 ```
 
 This command will build the Docker images and start the containers. The first time you run this, it may take a few minutes to download and set up everything.
