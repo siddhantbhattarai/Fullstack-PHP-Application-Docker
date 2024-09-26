@@ -148,8 +148,31 @@ Now that Docker and Docker Compose are installed, it's time to set up the applic
    volumes:
      db_data:
    ```
+3. **Update the Database Connection File**
 
-3. **Start the Docker Containers:**
+Modify the `connection/connection.php` file to use environment variables:
+
+```php
+<?php
+//main connection file for both admin & front end
+$servername = getenv('DB_HOST') ?: 'localhost'; //server
+$username = getenv('DB_USER') ?: 'root'; //username
+$password = getenv('DB_PASSWORD') ?: ''; //password
+$dbname = getenv('DB_NAME') ?: 'online_rest';  //database
+
+// Create connection
+$db = mysqli_connect($servername, $username, $password, $dbname); // connecting 
+
+// Check connection
+if (!$db) {       //checking connection to DB	
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>
+```
+
+This allows our application to connect to the database using the environment variables we set in `docker-compose.yml`.
+
+4. **Start the Docker Containers:**
 
    Build and start the application and database containers in detached mode.
 
@@ -157,7 +180,7 @@ Now that Docker and Docker Compose are installed, it's time to set up the applic
    docker-compose up -d --build
    ```
 
-4. **Check Running Containers:**
+5. **Check Running Containers:**
 
    Verify that your containers are running by listing them.
 
