@@ -134,7 +134,7 @@ This command will build the Docker images and start the containers. The first ti
 Once the containers are running, we need to import our database schema. First, copy the SQL file into the MySQL container:
 
 ```bash
-docker cp ./SQL/online_rest.sql restaurant-management-system-in-php_db_1:/tmp/
+docker cp SQL/online_rest.sql restaurant-management-system-in-php_db_1:/tmp/
 ```
 
 Then, execute the SQL file in the MySQL container:
