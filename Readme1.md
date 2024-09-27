@@ -1,7 +1,3 @@
-In that case, you can deploy the **Restaurant Management System in PHP** on an **Azure VM** running **Ubuntu Server** with 8 GB RAM. Here's an Azure-specific step-by-step guide tailored for your environment.
-
----
-
 ### Step-by-Step Guide to Deploy PHP Application Using Docker on Azure VM
 
 In this guide, we will walk you through the steps required to deploy a PHP application on an **Azure Virtual Machine** using **Docker**. This setup will run a fullstack application, including a **PHP-Apache server** and a **MySQL database**, using Docker containers.
@@ -31,7 +27,7 @@ Replace `<your-username>` with your Azure VM's username, and `<your-vm-public-ip
 Run the following commands to update all the packages and ensure your VM is up to date.
 
 ```bash
-sudo apt update && sudo apt upgrade -y
+sudo apt update -y
 ```
 
 ---
@@ -54,7 +50,6 @@ Now verify that Docker is installed correctly:
 
 ```bash
 docker --version
-docker ps
 ```
 
 ---
@@ -198,6 +193,7 @@ Now, configure the database connection in the `connect.php` file:
 
 ```bash
 cd connection/
+rm connect.php
 nano connect.php
 ```
 
@@ -228,13 +224,12 @@ if (!$db) {
 Now, you can build and run the Docker containers. First, build the Docker image:
 
 ```bash
-docker-compose build
+docker-compose up -d --build
 ```
 
-Once built, start the services:
-
+Check Running Containers: Verify that your containers are running by listing them.
 ```bash
-docker-compose up
+docker ps
 ```
 
 This command will spin up the **PHP-Apache** container and the **MySQL** container. The application will be running on port 80 of your Azure VM.
