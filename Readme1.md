@@ -230,13 +230,12 @@ Now, you can build and run the Docker containers. First, build the Docker image:
 ```bash
 docker-compose up -d --build
 ```
+This command will spin up the **PHP-Apache** container and the **MySQL** container. The application will be running on port 80 of your Azure VM.
 
 Check Running Containers: Verify that your containers are running by listing them.
 ```bash
 docker ps
 ```
-
-This command will spin up the **PHP-Apache** container and the **MySQL** container. The application will be running on port 80 of your Azure VM.
 
 ---
 
