@@ -216,6 +216,10 @@ if (!$db) {
 }
 ?>
 ```
+Nevigate to main directory. 
+```bash
+cd ..
+```
 
 ---
 
