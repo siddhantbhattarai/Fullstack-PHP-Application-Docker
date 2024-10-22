@@ -43,8 +43,8 @@ Start by logging into your Azure VM, either through SSH or directly from the Azu
 Next, clone the GitHub repository for the Restaurant Management System in PHP to your VM.
 
 ```bash
-git clone https://github.com/SAL6910/Restaurant-Management-System-in-PHP.git
-cd Restaurant-Management-System-in-PHP
+git clone https://github.com/siddhantbhattarai/Docker-Restaurant-Management-System-in-PHP.git
+cd Docker-Restaurant-Management-System-in-PHP
 ```
 
 #### Step 3: Install Docker Compose
