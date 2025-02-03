@@ -302,3 +302,5 @@ This will stop and remove the containers but keep the data in the Docker volumes
 You have successfully deployed a **fullstack PHP application** on an **Azure VM** using **Docker**. This guide covered everything from installing Docker and Docker Compose on the Ubuntu server to deploying a PHP-Apache web server with a MySQL database. You can now expand on this by adding more features or services as needed.
 
 If you encounter any issues during setup, double-check the configuration files and ensure your Azure VM's firewall allows HTTP traffic on port 80.
+![image](https://github.com/user-attachments/assets/182db685-0fcf-4e85-8eca-1bbe6c80c83b)
+
