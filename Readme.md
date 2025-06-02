@@ -112,7 +112,7 @@ FROM php:7.4-apache
 WORKDIR /var/www/html
 
 # Install system dependencies and PHP extensions
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --fix-missing\
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
