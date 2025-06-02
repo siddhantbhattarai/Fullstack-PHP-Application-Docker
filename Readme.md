@@ -202,10 +202,10 @@ Modify the file to use environment variables for the database connection:
 ```php
 <?php
 // Main connection file for both admin & frontend
-$servername = getenv('DB_HOST') ?: 'localhost';
+$servername = getenv('DB_HOST') ?: 'db';
 $username = getenv('DB_USER') ?: 'root';
-$password = getenv('DB_PASSWORD') ?: '';
-$dbname = getenv('DB_NAME') ?: 'online_rest';
+$password = getenv('DB_PASSWORD') ?: 'rootpassword';
+$dbname = getenv('DB_NAME') ?: 'restaurant_db';
 
 // Create connection
 $db = mysqli_connect($servername, $username, $password, $dbname);
